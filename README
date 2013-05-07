@@ -1,0 +1,44 @@
+++Clipboard is an easy way to share a clipboard between different computers. 
+
+Whenever you need to move a code, an URL, or anything else from one computer to
+another, you usually have few choices: you either copy the whole thing, letter 
+by letter, or you use an URL shortener/nopaste service. In both cases, you will
+have to type something. I spent like 10 minutes staring at a string I wanted to
+transfer to another computer, and I thought it would have been awesome if I
+could Ctrl-C and Ctrl-V it on my laptop: that's pretty much why I wrote this
+tool :-).
+
+++Clipboard requires php and xclip to be installed and available. I sure could
+have written the whole thing without them, but I wasn't willing to waste my life
+on it :-).
+
+The setting up is rather easy, you only need to upload the file ppclipboard.php
+somewhere, chmod and edit ppcc.php and ppcv.sh properly and copy them to your
+/usr/bin directory:
+
+# chmod 777 ppcc.php ppcv.sh
+# cp ppcc.php /usr/bin/ppcc.php
+# cp ppcv.sh /usr/bin/ppcv.sh
+
+(Instead of 777 I could have used +x but, as someone said, Melius abundare quam
+deficere :-).
+
+You should edit the files and choose a safe password, so that nobody but you can
+see/edit your clipboard. Also, don't forget to specify the URL of your 
+ppclipboard.php file in ppcc.php and ppcv.sh. 
+
+All right, now that everything's set up, you only need to create a couple of
+shortcuts to launch the scripts: as for me, I edited my ~/.fluxbox/keys file as
+follows (note: different Desktop Enviroments require different methods):
+
+Control Shift C : ExecCommand ppcc.php
+Control Shift V : ExecCommand ppcv.sh
+
+I guess that's pretty much it :-) Let me know if you find this useful: if enough
+people is interested in it, I might as well start working on a more complex and
+better written version ;-).
+
+Cheers,
+
+Flavio 'darkjoker' Giobergia
+darkjoker93[at]gmail[dot]com
