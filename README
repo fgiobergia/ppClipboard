@@ -13,15 +13,9 @@ have written the whole thing without them, but I wasn't willing to waste my life
 on it :-).
 
 The setting up is rather easy, you only need to upload the file ppclipboard.php
-somewhere, chmod and edit ppcc.php and ppcv.sh properly and copy them to your
-/usr/bin directory:
+somewhere, and install ppcc.php and ppcv.sh under /usr/local/bin:
 
-# chmod 777 ppcc.php ppcv.sh
-# cp ppcc.php /usr/bin/ppcc.php
-# cp ppcv.sh /usr/bin/ppcv.sh
-
-(Instead of 777 I could have used +x but, as someone said, Melius abundare quam
-deficere :-).
+# install -o0 -g0 -m755 ppcc.php ppcv.sh /usr/local/bin
 
 You should edit the files and choose a safe password, so that nobody but you can
 see/edit your clipboard. Also, don't forget to specify the URL of your 
